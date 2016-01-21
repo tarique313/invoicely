@@ -2,7 +2,7 @@
 
 <center>  <h4>Listing Dispatches</h4></center>
 <hr>
-<table>
+<table class="striped">
   <thead>
     <tr>
       <th>Date</th>
@@ -20,9 +20,9 @@
         <td><%= dispatch.company %></td>
         <td><%= dispatch.tax %></td>
         <td><%= dispatch.salesperson %></td>
-        <td><%= link_to 'Show', dispatch %></td>
-        <td><%= link_to 'Edit', edit_dispatch_path(dispatch) %></td>
-        <td><%= link_to 'Destroy', dispatch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', dispatch , class: "waves-effect waves-light btn"%></td>
+        <td><%= link_to 'Edit', edit_dispatch_path(dispatch) , class: "waves-effect waves-light btn"%></td>
+        <td><%= link_to 'Destroy', dispatch, method: :delete, data: { confirm: 'Are you sure?' } , class: "waves-effect waves-light btn"%></td>
       </tr>
     <% end %>
   </tbody>
