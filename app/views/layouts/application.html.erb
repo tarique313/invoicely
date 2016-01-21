@@ -3,15 +3,35 @@
 <head>
   <title>Invoice</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'style', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= stylesheet_link_tag 'https://fonts.googleapis.com/icon?family=Material+Icons' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'init', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
+
+   <nav class="teal lighten-1" role="navbar-fixed">
+    <div class="nav-wrapper">
+      <ul class="brand-logo"><%= link_to "Home", root_path%></ul>
+            <ul class="right hide-on-med-and-down">
+        <li><%= link_to "Home", root_path%></li>
+        <li><%= link_to "About Us", welcome_about_path%></li>
+        <li><%= link_to "Contact Us", welcome_contact_path%></li>
+        <li><%= link_to "FAQ", welcome_faq_path%></li>
+        <li><%= link_to "Pricing", welcome_pricing_path%></li>
+        <li><%= link_to "Features", welcome_features_path%></li>
+
+      </ul>
+    </div>
+  </nav>
 </head>
 <body>
-<div class="container">
-	<div class="row">
 
+
+ 
 <%= yield %>
-	</div>
-</div>
+
+
 </body>
 </html>

@@ -1,5 +1,6 @@
-<p id="notice"><%= notice %></p>
-
+<div class="container">
+<div class="row">
+<p id="notice"><%= notice %></p>       
 <center>  <h4>Listing Dispatches</h4></center>
 <hr>
 <table class="striped">
@@ -22,7 +23,7 @@
         <td><%= dispatch.salesperson %></td>
         <td><%= link_to 'Show', dispatch , class: "waves-effect waves-light btn"%></td>
         <td><%= link_to 'Edit', edit_dispatch_path(dispatch) , class: "waves-effect waves-light btn"%></td>
-        <td><%= link_to 'Destroy', dispatch, method: :delete, data: { confirm: 'Are you sure?' } , class: "waves-effect waves-light btn"%></td>
+        <td><%= link_to 'Destroy', dispatch, method: :delete, data: { confirm: 'Are you sure?' } , class: " red lighten-2 waves-effect waves-light btn"%></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +31,7 @@
 
 <br>
 
-<%= link_to 'New Dispatch', new_dispatch_path %>
+<%= link_to 'New Dispatch', new_dispatch_path, class: " blue darken-3 waves-effect waves-light btn" %>
+</div>
+</div>
+
