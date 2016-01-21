@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @dispatch.date %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @dispatch.company %>
+</p>
+
+<p>
+  <strong>Tax:</strong>
+  <%= @dispatch.tax %>
+</p>
+
+<p>
+  <strong>Salesperson:</strong>
+  <%= @dispatch.salesperson %>
+</p>
+
+<%= link_to 'Edit', edit_dispatch_path(@dispatch) %> |
+<%= link_to 'Back', dispatches_path %>

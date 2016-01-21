@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<center>  <h4>Listing Dispatches</h4></center>
+<hr>
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Company</th>
+      <th>Tax</th>
+      <th>Salesperson</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dispatches.each do |dispatch| %>
+      <tr>
+        <td><%= dispatch.date %></td>
+        <td><%= dispatch.company %></td>
+        <td><%= dispatch.tax %></td>
+        <td><%= dispatch.salesperson %></td>
+        <td><%= link_to 'Show', dispatch %></td>
+        <td><%= link_to 'Edit', edit_dispatch_path(dispatch) %></td>
+        <td><%= link_to 'Destroy', dispatch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dispatch', new_dispatch_path %>
