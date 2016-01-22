@@ -5,6 +5,8 @@ class DispatchesController < ApplicationController
   # GET /dispatches.json
   def index
     @dispatches = Dispatch.all
+    @search = DispatchSearch.new(params[:search])
+    @dispatches = @search.scope
   end
 
   # GET /dispatches/1

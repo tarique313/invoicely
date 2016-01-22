@@ -3,6 +3,20 @@
 <p id="notice"><%= notice %></p>       
 <center>  <h4>Listing Dispatches</h4></center>
 <hr>
+
+<div class="row">
+<div class="input-field col s6 range-query">
+  <%= form_tag dispatches_path, method: :get do %>
+    <%= text_field_tag 'search[date_from]', @search.date_from %>
+    </div>
+    <div class="input-field col s6 range-query">
+    <%= text_field_tag 'search[date_to]', @search.date_to %></div>
+    
+    <%= submit_tag 'Search', class: "waves-effect waves-light btn" %>
+   
+  <% end %>
+</div>
+</div>
 <table class="striped">
   <thead>
     <tr>
