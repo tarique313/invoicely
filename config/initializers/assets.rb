@@ -5,6 +5,9 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( background1.jpg )
 Rails.application.config.assets.precompile += %w( background2.jpg )
 Rails.application.config.assets.precompile += %w( background3.jpg )
+
+Rails.application.config.assets.precompile += %w( logo.svg )
+
 Rails.application.config.assets.precompile += %w( style.css )
 Rails.application.config.assets.precompile += %w( init.js )
 # Add additional assets to the asset load path
