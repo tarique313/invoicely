@@ -5,7 +5,10 @@
 
       <ul>
       <% @dispatch.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+       
+        <li><script type="text/javascript">
+          Materialize.toast('#{message}!', 4000);
+        </script>></li>
       <% end %>
       </ul>
     </div>

@@ -11,6 +11,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
+gem 'toastr-rails', '~> 1.0', '>= 1.0.3'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
