@@ -36,6 +36,7 @@
   <%= file_field_tag :file %>
   <%= submit_tag "Upload Company Info" %>
 <% end %>
-
+<h4>Download Company info</h4>
+<%= link_to "Company Report", companies_path(format: "csv")%>
 
 <%= link_to 'New Company', new_company_path %>
