@@ -35,17 +35,20 @@
         <td><%= dispatch.company %></td>
         <td><%= dispatch.tax %></td>
         <td><%= dispatch.salesperson %></td>
+        <% if current_user%>
         <td><%= link_to 'Show', dispatch , class: "waves-effect waves-light btn"%></td>
         <td><%= link_to 'Edit', edit_dispatch_path(dispatch) , class: "waves-effect waves-light btn"%></td>
         <td><%= link_to 'Destroy', dispatch, method: :delete, data: { confirm: 'Are you sure?' } , class: " red lighten-2 waves-effect waves-light btn"%></td>
       </tr>
     <% end %>
+    <% end %>
   </tbody>
 </table>
 
 <br>
-
+  <% if current_user%>
 <%= link_to 'New Dispatch', new_dispatch_path, class: " blue darken-3 waves-effect waves-light btn" %>
+<% end %>
 </div>
 </div>
 

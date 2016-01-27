@@ -1,8 +1,11 @@
+<div class="container">
+<div class="row">
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Companies</h1>
+<center><h3>Listing Companies</h3></center>
 
-<table>
+
+<table class="striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -20,23 +23,31 @@
         <td><%= company.manager %></td>
         <td><%= company.status %></td>
         <td><%= company.terms %></td>
-        <td><%= link_to 'Show', company %></td>
-        <td><%= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if current_user %>
+        <td><%= link_to 'Show', company, class: "waves-effect waves-light btn" %></td>
+        <td><%= link_to 'Edit', edit_company_path(company), class: "waves-effect waves-light btn" %></td>
+        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' }, class: " red lighten-2 waves-effect waves-light btn" %></td>
       </tr>
     <% end %>
+    <%end %>
   </tbody>
 </table>
 
 <br>
+<% if current_user %>
+<%= link_to 'New Company', new_company_path, class: " blue darken-3 waves-effect waves-light btn"  %>
+<hr>
+<h4>Import Companies</h4>
 
-<h3>Import Companies</h3>
 
 <%= form_tag import_companies_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "Upload Company Info" %>
+  <%= file_field_tag :file %><br><br>
+  <%= submit_tag "Upload Company Info" , class: "waves-effect waves-light btn"%>
 <% end %>
+<hr>
 <h4>Download Company info</h4>
-<%= link_to "Company Report", companies_path(format: "csv")%>
+<%= link_to "Company Report", companies_path(format: "csv"), class: "waves-effect waves-light btn"%>
+<%end%>
 
-<%= link_to 'New Company', new_company_path %>
+</div>
+</div>
